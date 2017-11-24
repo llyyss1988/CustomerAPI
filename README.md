@@ -2,9 +2,16 @@
 
 This little demo app is to show how to containerize a .NET Core WebAPI and deploy it to Azure Kubernetes Service (AKS)
 
-<a href="https://github.com/domaindrivendev/Swashbuckle.AspNetCore" target="_blank">https://github.com/domaindrivendev/Swashbuckle.AspNetCore</a>
+## Libraries ##
+
+* <a href="https://github.com/domaindrivendev/Swashbuckle.AspNetCore" target="_blank">https://github.com/domaindrivendev/Swashbuckle.AspNetCore</a>
+* <a href="https://www.nuget.org/packages/Faker.Data/" target="_blank">https://www.nuget.org/packages/Faker.Data/</a> (Converted to DotNet Core 2.0.3)
 
 ## Build ##
+
+``` bash
+dotnet build customerAPI.csproj
+```
 
 ## Dockerize ##
 

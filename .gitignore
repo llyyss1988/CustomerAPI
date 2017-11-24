@@ -30,3 +30,9 @@ msbuild.wrn
 
 # Visual Studio 2015
 .vs/
+
+# Shell Scripts
+*.sh
+
+# Private YAML
+*.yaml 

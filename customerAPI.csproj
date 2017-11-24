@@ -21,8 +21,10 @@
 
   <ItemGroup>
     <None Remove=".gitignore" />
+    <None Remove="build.sh" />
     <None Remove="LICENSE" />
     <None Remove="README.md" />
+    <None Remove="runlocal.sh" />
     <None Remove="_config.yml" />
   </ItemGroup>
 
