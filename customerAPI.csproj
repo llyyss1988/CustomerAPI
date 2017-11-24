@@ -21,6 +21,9 @@
 
   <ItemGroup>
     <None Remove=".gitignore" />
+    <None Remove="LICENSE" />
+    <None Remove="README.md" />
+    <None Remove="_config.yml" />
   </ItemGroup>
 
   <ItemGroup>
