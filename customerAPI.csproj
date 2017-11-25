@@ -54,4 +54,10 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="customerAPI.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

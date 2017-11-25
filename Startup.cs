@@ -51,11 +51,23 @@ namespace customerAPI
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1",
+                c.SwaggerDoc("1.1",
                     new Info
                     {
-                        Title = "Customer API - V1",
-                        Version = "v1"
+                        Title = "Customer API",
+                        Version = "1.1",
+                        Contact = new Contact()
+                        {
+                            Email = "spookdejur@hotmail.com",
+                            Name = "Stuart Williams",
+                            Url = "https://github.com/BlitzkriegSoftware"
+                        },
+                        Description = "Customer API DotNet Core + Docker + AKS Demo",
+                        License = new License()
+                        {
+                            Name = "MIT",
+                            Url = "https://opensource.org/licenses/MIT"
+                        }
                     }
                  );
 
@@ -80,7 +92,7 @@ namespace customerAPI
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Customer API V1");
+                c.SwaggerEndpoint("/swagger/1.1/swagger.json", "Customer API V1");
                 c.ShowRequestHeaders();
                 c.ShowJsonEditor();
             });

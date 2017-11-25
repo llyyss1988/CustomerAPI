@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using System.Net;
 
 namespace customerAPI
 {
@@ -31,6 +32,9 @@ namespace customerAPI
         /// <returns>IWebHost</returns>
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                //.UseKestrel(options => options.Listen(IPAddress.Parse("0.0.0.0"), 5000))
+                //.UseKestrel(options => options.Listen(IPAddress.Loopback, 5000))
+                .UseKestrel(options => options.Listen(new IPEndPoint(IPAddress.Parse("0.0.0.0"), 5000)))
                 .UseStartup<Startup>()
                 .Build();
     }

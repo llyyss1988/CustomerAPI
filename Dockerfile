@@ -9,7 +9,7 @@ LABEL Author="Stuart Williams <spookdejur@hotmail.com>"
 LABEL Version="1.1"
 
 # Variables
-ENV PORT 80
+ENV PORT 5000
 ENV WDIR /app
 
 ARG source
