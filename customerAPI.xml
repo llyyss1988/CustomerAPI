@@ -212,13 +212,6 @@
             </summary>
             <param name="args">(sic)</param>
         </member>
-        <member name="M:customerAPI.Program.BuildWebHost(System.String[])">
-            <summary>
-            Build Web Host
-            </summary>
-            <param name="args">(sic)</param>
-            <returns>IWebHost</returns>
-        </member>
         <member name="T:customerAPI.Startup">
             <summary>
             Start Up

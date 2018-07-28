@@ -36,3 +36,7 @@ msbuild.wrn
 
 # Private YAML
 *.yaml 
+
+# SonarQube
+.sonarqube/
+sonarqube.cmd

@@ -22,18 +22,19 @@ namespace customerAPI
         /// <param name="args">(sic)</param>
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
-        }
+            var config = new ConfigurationBuilder()
+                .AddCommandLine(args)
+                .AddEnvironmentVariables()
+                .Build();
 
-        /// <summary>
-        /// Build Web Host
-        /// </summary>
-        /// <param name="args">(sic)</param>
-        /// <returns>IWebHost</returns>
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseKestrel(options => options.Listen(new IPEndPoint(IPAddress.Parse("0.0.0.0"), 5000)))
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseConfiguration(config)
+                .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseStartup<Startup>()
                 .Build();
+            host.Run();
+        }
+
     }
 }
