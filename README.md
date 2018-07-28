@@ -67,8 +67,6 @@ start http://localhost:5000/swagger
 
 This will run it locally, and then browse to the swagger UI page
 
-
-
 ## Deploy to Azure Kubernetes Service (AKS) ##
 
 ```bash
@@ -96,6 +94,22 @@ kubectl delete deployment customerapi-deployment
 Pro-Tip:
 
 Shutdown your AKS Agent VMs when not in use to save $$$
+
+## PCF with Linux Stemcell ##
+
+Use the following script to make a linux image:
+
+```dos
+linux-publish.cmd
+```
+
+Then (assuming you are logged into your PCF instance, with the correct ORG and SPACE) using the `Manifest.yml` file:
+
+```dos
+pcf-push-it.cmd
+```
+
+Like most container systems, the app will run on its own internal port (usually 8080), but the load balancer in this case the GO Router, will map this to port 80, so you can browse to the app `/swagger` on the route PCF creates for you and use the API.
 
 ## About ##
 
