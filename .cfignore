@@ -1,0 +1,12 @@
+*.cmd
+*.sh
+
+*.yml
+*.yaml
+
+*.user
+
+.sonarqube/
+.vscode/
+
+Dockerfile

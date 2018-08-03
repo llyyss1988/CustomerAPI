@@ -4,6 +4,17 @@
         <name>customerAPI</name>
     </assembly>
     <members>
+        <member name="T:customerAPI.Controllers.HomeController">
+            <summary>
+            Controller: Home
+            </summary>
+        </member>
+        <member name="M:customerAPI.Controllers.HomeController.Index">
+            <summary>
+            Redirect to swagger
+            </summary>
+            <returns>Swagger page</returns>
+        </member>
         <member name="T:customerAPI.Controllers.PersonController">
             <summary>
             Person Operations
