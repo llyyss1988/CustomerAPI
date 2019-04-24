@@ -29,11 +29,6 @@
     <None Remove="_config.yml" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Content Include="..\Faker.Data\Faker\Faker.Data.DotNetCore\Faker.Data.xml" Link="Faker.Data.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\" />

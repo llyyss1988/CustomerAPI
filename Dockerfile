@@ -2,7 +2,7 @@
 # Dockerfile to build Customer API 
 # container image, based on aspnetcore image
 ############################################################
-FROM microsoft/aspnetcore:2.0
+FROM microsoft/dotnet
 
 # Labels
 LABEL Author="Stuart Williams <spookdejur@hotmail.com>"
@@ -31,4 +31,5 @@ HEALTHCHECK --interval=5m --timeout=3s \
   CMD curl -f http://localhost:${PORT} || exit 1
 
 # Start the app
-ENTRYPOINT ["dotnet", "customerAPI.dll"]
+#ENTRYPOINT ["dotnet", "customerAPI.dll"]
+CMD dotnet customerAPI.dll
