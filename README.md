@@ -61,7 +61,7 @@ Run Locally on Docker for Windows:
 ```bash
 #!/bin/bash
 CT={your registry name}/customerapi
-winpty docker run -d -p 5000:5000 $CT --name customerapi
+winpty docker run -d -p 5000:80 $CT --name customerapi
 start http://localhost:5000/swagger
 ```
 
