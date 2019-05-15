@@ -9,6 +9,6 @@ configuration:
 platform:
   - Any CPU
 environment:
-  APPVEYOR_RDP_PASSWORD: 123qazQAZ
+  APPVEYOR_RDP_PASSWORD: 123qaz$%^!1
 on_finish:
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
